@@ -1,0 +1,121 @@
+.presentation {
+        margin-top: 3%;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+        grid-template-rows: 1fr;
+        border: 1px solid #dfdfdf;
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.item__image {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.text {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.section__one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3%;
+}
+
+.section__two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+
+.section__content--one {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    /* column-gap: 20%; */
+    justify-content: center;
+}
+
+.section__content--two {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    column-gap: 10%;
+    justify-content: center;
+}
+
+.section__img {
+    width: 80%;
+    height: 500px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.section__tittle {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 3%;
+}
+
+.section__text {
+    text-align: center;
+    font-size: 18px;
+}
+
+.section__end {
+    width: 100%;
+
+}
+
+.items {
+    margin-top: 2%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid #f7f4f4;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.item__tittle {
+    font-size: 20px;
+    margin: 0;
+}
+
+.item__img {
+    width: 128px;
+    height: 140px;
+}
+
+.item_price {
+    font-size: 18px;
+}
+
+.reduced {
+    color: #e7880c;
+}

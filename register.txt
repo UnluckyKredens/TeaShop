@@ -1,0 +1,11 @@
+            <form class="form register">
+                <p class="tittle">Register</p>
+            <input type="text" name="username" placeholder="username" class="login__text">
+                <br/>
+                <input name="passwd" type="password" placeholder=" Password" class="password__text">
+                <br/>
+                <input name="passwd2" type="password" placeholder=" Password again" class="password__text">
+                <br>
+                <button>Login</button>
+                <br/>
+            </form>
