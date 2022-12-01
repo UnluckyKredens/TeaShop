@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Sono:wght@300&display=swap" rel="stylesheet">
     <title>Sklep Internetowy</title>
     <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/contact-list.css">
 </head>
 <body>
     <div class="container">
@@ -31,27 +31,24 @@
             </div>
         </header>
 
-        <form class="content" method="post" action="contact-success.php">
-                <h2>Have you got problem?<br>Call us!</h2>
-                <?php
-                    if(isset($_COOKIE['username'])) {
-                        echo '
-                        <input class="formfield username" value="'.$_COOKIE['username'].'" placeholder="Your name" type="text" name="contact_name">
-                        <input class="formfield text" type="text" name="contact_info">
-                        </br>
-                        <button class="send">Send</button>
-                        ';
-                    }else {
-                        echo '
-                        <input class="formfield username" placeholder="Your name" type="text" name="contact_name">
-                        <input class="formfield text" type="text" name="contact_info">
-                        </br>
-                        <button class="send">Send</button>
-                        '; 
-                    }
+        <div class="content">
+            <table>
+        <?php
+                     $dblnk = mysqli_connect("localhost", "root", "", "teashop");
 
+                    
+                            $getContactList = mysqli_query($dblnk, "SELECT * from contact");
+                            while($items = mysqli_fetch_row($getContactList)) {
+                                echo '
+                                    <tr>
+                                        <td>'.$items[0].'</td>
+                                        <td>'.$items[1].'</td>
+                                    </tr>
+                                ';
+                            }
 ?>
-            </form>
+            </table>
+        </div>
     </div>
 </body>
 </html>
